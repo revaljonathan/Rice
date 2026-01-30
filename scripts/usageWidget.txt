@@ -1,0 +1,13 @@
+
+
+// copy the scripts below to "command output" widget in kde plasma
+
+top -bn1 | grep "Cpu(s)" | awk '{printf "󰍛%3.0f%% ", 100 - $8}'; sensors | awk '/Package id 0/ {gsub(/[+°C]/,"",$4); sub(/\..*/,"",$4); printf "%3s°C ", $4}'; free | awk '/Mem:/ {printf "󰘚%3.0f%%\n", $3/$2 * 100}'
+
+// it will display
+󰍛 cpu usage %  cpu avg temp 󰘚 ram usage
+
+// for example
+󰍛 01% 67°C 󰘚67%
+
+// i reccomend to use monospace fonts to make the looks more consistent and not keep on resizing
