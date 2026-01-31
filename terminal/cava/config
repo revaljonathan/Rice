@@ -248,16 +248,18 @@ channels = mono
 # background must also be defined in hex or remain commented out. 1 = on, 0 = off.
 # You can define as many as 8 different colors. They range from bottom to top of screen
 
+background = '#1e1e2e'
+
 gradient = 1
 
-gradient_color_1 = '#d7ecff'   # pale icy blue (masih terang)
-gradient_color_2 = '#c2e2ff'   # frost blue
-gradient_color_3 = '#a9d4ff'   # colder ice layer
-gradient_color_4 = '#8fc6ff'   # glacier blue
-gradient_color_5 = '#77b6ff'   # winter lake blue
-gradient_color_6 = '#5ea6ff'   # chill deep-blue ice
-gradient_color_7 = '#4a96ff'   # freezing mid-blue
-gradient_color_8 = '#3687ff'   # saturated cold blue highlight
+gradient_color_1 = '#94e2d5'
+gradient_color_2 = '#89dceb'
+gradient_color_3 = '#74c7ec'
+gradient_color_4 = '#89b4fa'
+gradient_color_5 = '#cba6f7'
+gradient_color_6 = '#f5c2e7'
+gradient_color_7 = '#eba0ac'
+gradient_color_8 = '#f38ba8'
 
 
 
