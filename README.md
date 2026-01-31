@@ -11,9 +11,13 @@ theme is Catppuccin mocha flamingo, with highlight color #cba6f7
 fonts is mainly inter for most ui, and jetbrains mono for panel bar and text editors
 
 ![Main](assets/mainpic.png)
+
 ![Terminal](assets/term.png)
+
 ![display1](assets/display1.png)
+
 ![vs1](assets/vs1.png)
+
 ![vs2](assets/vs2.png)
 
 
