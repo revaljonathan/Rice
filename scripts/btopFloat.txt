@@ -1,0 +1,5 @@
+// copy this command to command output widget, preferrably on the "click" command\\
+
+/usr/bin/env bash -lc 'kitty --app-id btop-float --title btop-float btop'
+
+// then you can go to window rule, and make "btop-float" positions, size, or whatever is available there
