@@ -130,7 +130,7 @@ ignore_base = false
 
 [character]
 success_symbol = "[ ╰→](bold fg:#mauve)[](fg:#89dceb)"
-error_symbol   = "[ 󱞩](bold fg:#f38ba8)[](fg:#f38ba8)"
+error_symbol   = "[ ╰→](bold fg:#f38ba8)[](fg:#f38ba8)"
 vimcmd_symbol  = "[❮❮ ﾒ](fg:#6fa3b1)"
 
 [time]
