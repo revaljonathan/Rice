@@ -1,7 +1,8 @@
+
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[ ╭](text)\
+[ ┌](text)\
 $os\
 $username\
 [](bg:lavender fg:text)\
@@ -129,15 +130,15 @@ ignore_base = false
 
 
 [character]
-success_symbol = "[ ╰→](bold fg:#mauve)[](fg:#89dceb)"
-error_symbol   = "[ ╰→](bold fg:#f38ba8)[](fg:#f38ba8)"
+success_symbol = "[ └─](bold fg:#)[](fg:blue)"
+error_symbol   = "[ └─](bold fg:#)[](fg:red)"
 vimcmd_symbol  = "[❮❮ ﾒ](fg:#6fa3b1)"
 
 [time]
 disabled = false
 time_format = "%R"
 style = "bg:lavender"
-format = '[───────────────────](fg:surface0)[](#af7e5f)[](fg:#af7e5f bg:#af7e5f)[](fg:peach bg:#af7e5f )[[at $time  ](fg:crust bg:peach)]($style)'
+format = '[───────────────────](fg:surface0)[](#af7e5f)[](fg:#af7e5f bg:#af7e5f)[](fg:peach bg:#af7e5f )[[ at $time  ](fg:crust bg:peach)]($style)'
 
 [cmd_duration]
 show_milliseconds = true
