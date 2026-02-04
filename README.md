@@ -2,13 +2,47 @@
 
 my repo for kde plasma dotfiles
 
-widget i use from left to right:
-kara, plasmusic toolbar, digital clock, spacer, window title applet, command output (see scripts), system tray, power and weather widget plus (hidden)
-panel is configured with panel colorizer
+Distro      : Endeavour OS
 
-theme is Catppuccin mocha flamingo, with highlight color #cba6f7
+DE          : KDE Plasma
 
-fonts is mainly inter for most ui, and jetbrains mono for panel bar and text editors
+Theme       : catppuccin mocha flamingo: https://store.kde.org/p/2279886
+
+Icons       : Papirus (teal folder): https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
+
+Cursor      : catppuccin mocha (dark): https://github.com/catppuccin/cursors
+
+Font        : inter, Jetbrains mono
+
+Terminal    : kitty
+
+Shell       : zsh
+
+File manager : dolphin
+
+Panel bar   : KDE's own bar with panel colorizer: https://github.com/luisbocanegra/plasma-panel-colorizer
+
+Apps shown in screenshots:
++ terminal : kitty
++ editor : vscode
++ fastfetch : https://github.com/fastfetch-cli/fastfetch
++ btop : https://github.com/aristocratos/btop
++ dolphin
+
+Widgets on panel from left to right:
++ kara: https://github.com/dhruv8sh/kara
++ plasmusic toolbar : https://github.com/ccatterina/plasmusic-toolbar
++ digital clock
++ window title applet : https://github.com/dhruv8sh/plasma6-window-title-applet
++ command output : https://github.com/Zren/plasma-applet-commandoutput (see "scripts" folder)
++ system tray
++ shutdown or switch : https://github.com/Davide-sd/shutdown_or_switch
+
+
+Notes
++ resolution : 1920x1080
++ Blur/transparency : none, but kitty opacity at 0,975
+
 
 ![Main](assets/mainpic.png)
 
