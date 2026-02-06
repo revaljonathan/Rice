@@ -40,8 +40,8 @@ Widgets on panel from left to right:
 
 
 Notes
-+ most of my config is just copy-pasting catppuccin-mocha themne with some minor tweaks, go check them out! : https://github.com/catppuccin
-+ resolution : 1920x1080
++ most of my config is just copy-pasting catppuccin-mocha theme with some minor tweaks, go check them out! : https://github.com/catppuccin
++ resolution : 1920x1200
 + Blur/transparency : none, but kitty opacity at 0,975
 
 
