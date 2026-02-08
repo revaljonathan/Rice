@@ -35,3 +35,5 @@ set render-loading-fg         rgba(205,214,244,1)
 set highlight-color           rgba(147,153,178,0.3)
 set highlight-fg              rgba(205,214,244,1)
 set highlight-active-color    rgba(203,166,247,0.3)
+
+set selection-clipboard clipboard
