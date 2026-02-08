@@ -20,7 +20,10 @@ Shell       : zsh
 
 File manager : dolphin
 
+Pdf reader : zathura: https://github.com/pwmt/zathura
+
 Panel bar   : KDE's own bar with panel colorizer: https://github.com/luisbocanegra/plasma-panel-colorizer
+
 
 Apps shown in screenshots:
 + terminal : kitty
