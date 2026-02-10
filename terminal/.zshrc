@@ -46,6 +46,8 @@ gacp() {
   git push
 }
 
+export BAT_THEME="Catppuccin Mocha"
+
 # ALIASES
 alias up='paru -Syu'
 alias clean='sudo paccache -rk1 && paru -c'
@@ -56,19 +58,22 @@ alias suspend='systemctl suspend'
 alias aq='asciiquarium'
 alias pipes='pipes.sh'
 alias zshnew='source ~/.zshrc'
-alias rain='terminal-rain --rain-color white --lightning-color yellow'
 alias clock='tty-clock -s -c -C 5'
 alias checkmod='supergfxctl -g'
 alias ls='eza --icons --group-directories-first'
 alias pacnews="arch_news_check"
 alias morefetch="fastfetch"
-alias quote='fortune | cowsay -r'
+alias q='fortune | cowsay -r'
 alias color="color_check"
 alias modintel='supergfxctl -m Integrated'
 alias modhybrid='supergfxctl -m Hybrid'
 alias listmod='supergfxctl -s'
 alias gs='git status'
-
+alias docs='cd Documents'
+alias rice='cd Rice'
+alias morefetch='fastfetch -c ~/.config/fastfetch/morefetch.jsonc'
+alias upgrub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias uni='cd uniStuff'
 
 
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then
@@ -82,6 +87,8 @@ ZSH_THEME="robbyrussell"
 plugins=(
     zsh-autosuggestions
     zsh-completions
+    sudo
+    fzf
 )
 
 source $ZSH/oh-my-zsh.sh
