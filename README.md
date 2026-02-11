@@ -24,6 +24,7 @@ Pdf reader : zathura: https://github.com/pwmt/zathura
 
 Panel bar   : KDE's own bar with panel colorizer: https://github.com/luisbocanegra/plasma-panel-colorizer
 
+app launcher : fuzzel: https://codeberg.org/dnkl/fuzzel
 
 Apps shown in screenshots:
 + terminal : kitty
@@ -40,7 +41,6 @@ Widgets on panel from left to right:
 + command output : https://github.com/Zren/plasma-applet-commandoutput (see "scripts" folder)
 + system tray
 + shutdown or switch : https://github.com/Davide-sd/shutdown_or_switch
-
 
 Notes
 + most of my config is just copy-pasting catppuccin-mocha theme with some minor tweaks, go check them out! : https://github.com/catppuccin
