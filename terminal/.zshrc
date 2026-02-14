@@ -47,6 +47,7 @@ gacp() {
 }
 
 export BAT_THEME="Catppuccin Mocha"
+export "MICRO_TRUECOLOR=1"
 
 # ALIASES
 alias up='paru -Syu'
@@ -74,7 +75,7 @@ alias rice='cd Rice'
 alias morefetch='fastfetch -c ~/.config/fastfetch/morefetch.jsonc'
 alias upgrub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias uni='cd uniStuff'
-
+alias view='gwenview'
 
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then
     fastfetch
