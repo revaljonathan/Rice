@@ -52,6 +52,10 @@ Cool stuff
 + krhonkite : https://github.com/esjeon/krohnkite
 + web to change wallpaper color scheme : https://notneelpatel.xyz/WallpaperThemeConverter/
 
+# TODO
++ try blur + transparency on more stuff
++ considered switching to fedora later
+
 ![Main](assets/mainpic.png)
 
 ![Terminal](assets/term.png)
