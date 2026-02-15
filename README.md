@@ -50,7 +50,7 @@ Notes
 Cool stuff
 + KDE rounded corner : https://github.com/matinlotfali/KDE-Rounded-Corners
 + krhonkite : https://github.com/esjeon/krohnkite
-
++ web to change wallpaper color scheme : https://notneelpatel.xyz/WallpaperThemeConverter/
 
 ![Main](assets/mainpic.png)
 
