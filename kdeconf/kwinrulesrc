@@ -1,0 +1,106 @@
+[16069622-a2a7-4c22-bbf4-fba0f65ae9e7]
+Description=all
+Enabled=false
+noborder=true
+noborderrule=2
+
+[1b726508-e123-45c0-8255-bc73d7d1c3c5]
+Description=emoji
+ignoregeometryrule=2
+noborder=true
+noborderrule=3
+placementrule=2
+position=1442,46
+positionrule=2
+size=467,567
+sizerule=2
+wmclass=org.kde.plasma.emojier
+wmclassmatch=1
+
+[2e60ca3f-5d47-4631-b52a-acf9b59bcd34]
+Description=vsc
+noborder=true
+noborderrule=2
+wmclass=code
+wmclasscomplete=true
+wmclassmatch=2
+
+[33ac5bbc-916b-4a0a-8ced-13786c09f49a]
+Description=Settings for org.kde.gwenview
+noborder=true
+noborderrule=2
+wmclass=org.kde.gwenview
+wmclassmatch=1
+
+[6db5c3e3-abd2-4386-850f-9e991000d799]
+Description=Settings for mpv
+noborder=true
+noborderrule=2
+wmclass=mpv
+wmclassmatch=1
+
+[7e4f225c-d2a9-4418-8964-6c56c0c7f410]
+Description=Settings for org.kde.dolphin
+noborder=true
+noborderrule=2
+wmclass=org.kde.dolphin
+wmclassmatch=1
+
+[810c6836-ec73-4e02-bc6e-aa2ff6ba9b52]
+Description=zatura
+noborder=true
+noborderrule=2
+wmclass=org.pwmt.zathura
+wmclassmatch=1
+
+[General]
+count=13
+rules=f01a9c36-d2b4-4833-94af-d6943f3af3b8,1b726508-e123-45c0-8255-bc73d7d1c3c5,7e4f225c-d2a9-4418-8964-6c56c0c7f410,b36c799a-3c7b-47db-827d-9745fe33f58e,c02c30a0-3c5a-4f58-9bb9-070bd3e3bd87,2e60ca3f-5d47-4631-b52a-acf9b59bcd34,16069622-a2a7-4c22-bbf4-fba0f65ae9e7,cd5fc2ff-8446-45d0-baf7-bdaaf2cba31c,6db5c3e3-abd2-4386-850f-9e991000d799,810c6836-ec73-4e02-bc6e-aa2ff6ba9b52,b6c3aae8-055c-460d-a2b5-b9f7f23e09b6,33ac5bbc-916b-4a0a-8ced-13786c09f49a,c37591ff-c6b9-45d2-97ba-fa6b41776854
+
+[b36c799a-3c7b-47db-827d-9745fe33f58e]
+Description=Settings for systemsettings
+noborder=true
+noborderrule=3
+wmclass=systemsettings
+wmclassmatch=1
+
+[b6c3aae8-055c-460d-a2b5-b9f7f23e09b6]
+Description=Settings for obsidian
+noborder=true
+noborderrule=2
+wmclass=obsidian
+wmclassmatch=1
+
+[c02c30a0-3c5a-4f58-9bb9-070bd3e3bd87]
+Description=Settings for brave-browser
+noborder=true
+noborderrule=2
+wmclass=brave-browser
+wmclassmatch=1
+
+[c37591ff-c6b9-45d2-97ba-fa6b41776854]
+Description=Settings for org.kde.kdeconnect.app
+noborder=true
+noborderrule=3
+wmclass=org.kde.kdeconnect.app
+wmclassmatch=1
+
+[cd5fc2ff-8446-45d0-baf7-bdaaf2cba31c]
+Description=Copy of all
+Enabled=false
+noborder=true
+noborderrule=2
+wmclass=feh
+wmclassmatch=1
+
+[f01a9c36-d2b4-4833-94af-d6943f3af3b8]
+Description=Settings for btop-float
+ignoregeometry=true
+ignoregeometryrule=2
+placementrule=2
+position=965,46
+positionrule=2
+size=942,563
+sizerule=2
+wmclass=btop-float
+wmclassmatch=1
