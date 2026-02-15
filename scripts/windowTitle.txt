@@ -1,0 +1,51 @@
+name match
+
+"Telegram Desktop"
+"Gimp-.*"
+"soffice.bin"
+"Spotify.*"
+"Kate.*"
+"kitty"
+"kitty"
+"kitty"
+"mpv Media Player"
+"Visual Studio Code"
+"Dolphin"
+"Zathura"
+"Gwenview"
+"feh"
+
+
+title match
+
+".*"
+".*"
+".*"
+".*"
+".*"
+".*"
+.*@.*:~
+"btop-float"
+".*"
+".*"
+".*"
+".*"
+".*"
+".*"
+
+replacement
+
+"Telegram"
+"Gimp"
+"LibreOffice"
+"Spotify"
+"Kate : %w"
+" %w"
+" Kitty"
+" Btop"
+"󰎁 %w"
+" %w"
+"󰝰 %w"
+" %w"
+" %w"
+" %w"
