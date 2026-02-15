@@ -51,7 +51,7 @@ export "MICRO_TRUECOLOR=1"
 
 # ALIASES
 alias up='paru -Syu'
-alias clean='sudo paccache -rk1 && paru -c'
+alias clean='sudo paccache -rk2 && paru -c'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias shutnow='shutdown now'
@@ -76,6 +76,12 @@ alias morefetch='fastfetch -c ~/.config/fastfetch/morefetch.jsonc'
 alias upgrub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias uni='cd uniStuff'
 alias view='gwenview'
+alias ac='kscreen-doctor output.eDP-2.mode.1920x1200@60 && sleep 3 && modintel && loginctl terminate-user $USER'
+alias plug='kscreen-doctor output.eDP-2.mode.1920x1200@165 && sleep 3 && modhybrid && loginctl terminate-user $USER'
+alias nano='micro'
+alias vim='nvim'
+alias vi='nvim'
+
 
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then
     fastfetch
