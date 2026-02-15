@@ -81,7 +81,7 @@ alias plug='kscreen-doctor output.eDP-2.mode.1920x1200@165 && sleep 3 && modhybr
 alias nano='micro'
 alias vim='nvim'
 alias vi='nvim'
-
+alias zat='zathura'
 
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then
     fastfetch
