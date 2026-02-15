@@ -47,6 +47,9 @@ Notes
 + resolution : 1920x1200
 + Blur/transparency : none, but kitty opacity at 0,975
 
+Cool stuff
++ KDE rounded corner : https://github.com/matinlotfali/KDE-Rounded-Corners
++ krhonkite : https://github.com/esjeon/krohnkite
 
 
 ![Main](assets/mainpic.png)
