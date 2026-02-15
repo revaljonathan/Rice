@@ -36,6 +36,47 @@ for i in {0..255}; do
 done
 }
 
+
+
+export BAT_THEME="Catppuccin Mocha"
+export "MICRO_TRUECOLOR=1"
+
+
+#     ___   ___                
+#    / _ | / (_)__ ____ ___ ___
+#   / __ |/ / / _ `(_-</ -_|_-<
+#  /_/ |_/_/_/\_,_/___/\__/___/
+                            
+# SYSTEM
+alias up='paru -Syu'
+alias clean='sudo paccache -rk2 && paru -c'
+alias pacnews='arch_news_check'
+alias upgrub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+alias zshnew='source ~/.zshrc'
+
+# POWER
+alias shutnow='shutdown now'
+alias suspend='systemctl suspend'
+
+# DISPLAY / GPU
+alias checkmod='supergfxctl -g'
+alias listmod='supergfxctl -s'
+alias modintel='supergfxctl -m Integrated'
+alias modhybrid='supergfxctl -m Hybrid'
+alias ac='kscreen-doctor output.eDP-2.mode.1920x1200@60 && sleep 3 && modintel && loginctl terminate-user $USER'
+alias plug='kscreen-doctor output.eDP-2.mode.1920x1200@165 && sleep 3 && modhybrid && loginctl terminate-user $USER'
+
+# NAVIGATION
+alias docs='cd Documents'
+alias rice='cd Rice'
+alias uni='cd uniStuff'
+alias dl='cd Downloads'
+alias lt='ls -lht'
+alias lz='ls -lhS'
+alias la='ls -A'
+
+# GIT
+alias gs='git status'
 gacp() {
   if [ -z "$1" ]; then
     echo "isi commit message dulu njinggs"
@@ -46,42 +87,33 @@ gacp() {
   git push
 }
 
-export BAT_THEME="Catppuccin Mocha"
-export "MICRO_TRUECOLOR=1"
-
-# ALIASES
-alias up='paru -Syu'
-alias clean='sudo paccache -rk2 && paru -c'
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias shutnow='shutdown now'
-alias suspend='systemctl suspend'
-alias aq='asciiquarium'
-alias pipes='pipes.sh'
-alias zshnew='source ~/.zshrc'
-alias clock='tty-clock -s -c -C 5'
-alias checkmod='supergfxctl -g'
-alias ls='eza --icons --group-directories-first'
-alias pacnews="arch_news_check"
-alias morefetch="fastfetch"
-alias q='fortune | cowsay -r'
-alias color="color_check"
-alias modintel='supergfxctl -m Integrated'
-alias modhybrid='supergfxctl -m Hybrid'
-alias listmod='supergfxctl -s'
-alias gs='git status'
-alias docs='cd Documents'
-alias rice='cd Rice'
-alias morefetch='fastfetch -c ~/.config/fastfetch/morefetch.jsonc'
-alias upgrub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-alias uni='cd uniStuff'
-alias view='gwenview'
-alias ac='kscreen-doctor output.eDP-2.mode.1920x1200@60 && sleep 3 && modintel && loginctl terminate-user $USER'
-alias plug='kscreen-doctor output.eDP-2.mode.1920x1200@165 && sleep 3 && modhybrid && loginctl terminate-user $USER'
+# EDITORS
 alias nano='micro'
 alias vim='nvim'
 alias vi='nvim'
+
+# FILE VIEWERS
+alias see='bat'
+alias view='gwenview'
 alias zat='zathura'
+
+# SHELL UTILS
+alias ls='eza --icons --group-directories-first'
+alias grep='grep --color=auto'
+alias color='color_check'
+
+
+# FETCH / INFO
+alias morefetch='fastfetch -c ~/.config/fastfetch/morefetch.jsonc'
+alias clock='tty-clock -s -c -C 5'
+
+# FUN
+alias aq='asciiquarium'
+alias pipes='pipes.sh'
+alias q='fortune | cowsay -r'
+alias plis='sudo'
+
+
 
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then
     fastfetch
