@@ -16,7 +16,7 @@
     }
 },
     "display": {
-        "separator": "  "
+        "separator": " "
     },
     
 "modules": [
@@ -26,46 +26,46 @@
         "type" : "custom"
     },
       {
-    "key": "{#38;5;14}󰣇   Distro{#keys}{#38;5;147}  ~",
+    "key": "{#38;5;14}󰣇   Distro{#keys}{#38;5;147}  ::",
     "type": "os"
     },
 
     {
-    "key": "{#38;5;14}   Shell{#keys}{#38;5;147}   ~",
+    "key": "{#38;5;14}   Shell{#keys}{#38;5;147}   ::",
     "type": "shell"
     },
         {
-    "key": "{#38;5;14}   RAM{#keys}{#38;5;147}     ~",
+    "key": "{#38;5;14}   RAM{#keys}{#38;5;147}     ::",
     "type": "memory",
     "format": "{1} | {2}"
     },
     {
-    "key": "{#38;5;14}󰉉   Storage{#keys}{#38;5;147} ~",
+    "key": "{#38;5;14}󰉉   Storage{#keys}{#38;5;147} ::",
     "type": "disk",
     "format": "{1} | {2}"
     },
      {
-    "key": "{#38;5;14}{icon}   Display {#keys}{#38;5;147}~",
+    "key": "{#38;5;14}{icon}   Display {#keys}{#38;5;147}::",
     "type": "display",
-    "format": "1920 x 1200, {refresh-rate}Hz"
+    "format": "1920x1200, {refresh-rate}Hz"
     },
 
     //{
-    //"key": "{#38;5;14}󰏖   Packs {#keys}{#38;5;147}  ~",
+    //"key": "{#38;5;14}󰏖   Packs {#keys}{#38;5;147}  ::",
     //"type": "packages"
     //},
     {
-    "key": "{#38;5;14}{icon}   Uptime {#keys}{#38;5;147} ~",
+    "key": "{#38;5;14}{icon}   Uptime {#keys}{#38;5;147} ::",
     "type": "uptime"
     },
-    {
-    "key": "{#38;5;14}   OS age {#keys}{#38;5;147} ~",
-    "type": "command",
-    "text": "birth_install=$(stat -c %W /); current=$(date +%s); echo $(((current - birth_install) / 86400)) days"
-    },
+    //{
+   // "key": "{#38;5;14}   OS age {#keys}{#38;5;147} ::",
+    //"type": "command",
+    //"text": "birth_install=$(stat -c %W /); current=$(date +%s); echo $(((current - birth_install) / 86400)) days"
+   // },
 
     {
-    "key": "{#38;5;14}   Colors {#38;5;147} ~  {#38;5;0}{#38;5;1}{#38;5;2}{#38;5;3}{#38;5;4}{#38;5;5}{#38;5;6}{#38;5;7} ",
+    "key": "{#38;5;14}   Colors {#38;5;147} ::  {#38;5;0}{#38;5;1}{#38;5;2}{#38;5;3}{#38;5;4}{#38;5;5}{#38;5;6}{#38;5;7} ",
     "type": "custom"
     }
 
