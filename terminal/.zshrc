@@ -1,7 +1,11 @@
 # Created by newuser for 5.9
 
 # BASIC ENV & KEYBIND
+#zmodload zsh/zprof
 export TERM=xterm-256color
+export BAT_THEME="Catppuccin Mocha"
+export "MICRO_TRUECOLOR=1"
+
 bindkey '^[[A' up-line-or-history
 bindkey '^[[B' down-line-or-history
 
@@ -9,7 +13,7 @@ bindkey '^[[B' down-line-or-history
 setopt auto_cd
 setopt interactive_comments
 setopt multios
-
+setopt histexpand
 
 arch_news_check() {
     echo "🔔 Latest Arch Linux news:"
@@ -18,16 +22,7 @@ arch_news_check() {
       | cut -d'"' -f2 \
       | head -n 5 \
       | sed 's|^|https://archlinux.org|'
-
-    echo
-    read -p "Do you want to continue with the system upgrade? [y/N] " answer
-    if [[ "$answer" =~ ^[yY]$ ]]; then
-        sudo pacman -Syu
-    else
-        echo "⏹️ Upgrade cancelled."
-    fi
 }
-
 
 color_check() {
 for i in {0..255}; do
@@ -38,28 +33,28 @@ for i in {0..255}; do
 done
 }
 
-
-export BAT_THEME="Catppuccin Mocha"
-export "MICRO_TRUECOLOR=1"
-
-
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then
     fastfetch
 fi
 
 # OH MY ZSH
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
+ZSH_THEME=""
 
 plugins=(
     zsh-autosuggestions
-    zsh-completions
     sudo
-    fzf
 )
 
-source $ZSH/oh-my-zsh.sh
+skip_global_compinit=1                          
+autoload -Uz compinit 
+if [[ -n /tmp/zcompdump-$USER(#qN.mh+24) ]]; then
+  compinit -d /tmp/zcompdump-$USER
+else
+  compinit -C -d /tmp/zcompdump-$USER
+fi
 
+source $ZSH/oh-my-zsh.sh
 
 # COMPLETION BEHAVIOR
 zstyle ':completion:*' menu select
@@ -75,6 +70,9 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 # SYNTAX HIGHLIGHTING
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
+# FZF
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 #     ___   ___                
 #    / _ | / (_)__ ____ ___ ___
@@ -123,9 +121,12 @@ alias mic='micro'
 alias see='bat'
 alias view='gwenview'
 alias zat='zathura'
-
 unalias ls
 alias ls='eza --icons --group-directories-first'
+take() {
+  mkdir -p "$1" && cd "$1"
+}
+
 
 # NAVIGATION
 alias docs='cd Documents'
@@ -136,10 +137,31 @@ alias lt='eza --sort oldest'
 alias lz='ls -lhS'
 alias la='ls -A'
 alias lts='ls -T'
+alias sz='du -sh * | sort -h'
 
 # SHELL UTILS
 alias grep='grep --color=auto'
 alias color='color_check'
+fuck() { sudo $(fc -ln -1) }
+extract() {
+  if [ -f "$1" ]; then
+    case "$1" in
+      *.tar.bz2) tar xjf "$1" ;;
+      *.tar.gz)  tar xzf "$1" ;;
+      *.bz2)     bunzip2 "$1" ;;
+      *.rar)     unrar x "$1" ;;
+      *.gz)      gunzip "$1" ;;
+      *.tar)     tar xf "$1" ;;
+      *.tbz2)    tar xjf "$1" ;;
+      *.tgz)     tar xzf "$1" ;;
+      *.zip)     unzip "$1" ;;
+      *) echo "Format tolol." ;;
+    esac
+  else
+    echo "mana filenya su."
+  fi
+}
+
 
 # FETCH / INFO
 alias morefetch='fastfetch -c ~/.config/fastfetch/morefetch.jsonc'
@@ -150,15 +172,23 @@ alias aq='asciiquarium'
 alias pipes='pipes.sh'
 alias q='fortune | cowsay -r'
 alias plis='sudo'
+alias udanraksu='weather semarang'
+weather() {
+  curl wttr.in/"$1"
+}
 
 
+f() { eval $(thefuck $(fc -ln -1)); }
 
-
-# ===============================
 # STARSHIP (LAST)
-# ===============================
 eval "$(starship init zsh)"
 
 
 # Created by `pipx` on 2025-12-31 05:14:11
 export PATH="$PATH:/home/reval/.local/bin"
+
+
+
+
+
+#zprof
