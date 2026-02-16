@@ -26,6 +26,9 @@ Panel bar   : KDE's own bar with panel colorizer: https://github.com/luisbocaneg
 
 app launcher : fuzzel: https://codeberg.org/dnkl/fuzzel
 
+greeter : SDDM 
+
+
 Apps shown in screenshots:
 + terminal : kitty
 + editor : vscode
@@ -51,7 +54,7 @@ Cool stuff
 + KDE rounded corner : https://github.com/matinlotfali/KDE-Rounded-Corners
 + krhonkite : https://github.com/esjeon/krohnkite
 + web to change wallpaper color scheme : https://notneelpatel.xyz/WallpaperThemeConverter/
-
++ SDDM theme : eucalyptus-drop : https://gitlab.com/Matt.Jolly/sddm-eucalyptus-drop
 # TODO
 + try blur + transparency on more stuff
 + considered switching to fedora later
