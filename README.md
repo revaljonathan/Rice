@@ -59,6 +59,8 @@ Cool stuff
 + try blur + transparency on more stuff
 + considered switching to fedora later
 
+![Main](assets/sddm.png)
+
 ![Main](assets/mainpic.png)
 
 ![Terminal](assets/term.png)
