@@ -7,5 +7,3 @@ yes, used ai for some of this, for the template, then i filled the colors myself
 
 colors inspirated from lazyvim's tokyo night storm, shout out!
 
-![vs1](assets/vs1.png)
-![vs2](assets/vs2.png)
