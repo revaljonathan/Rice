@@ -10,7 +10,7 @@ $directory\
 [](bg:blue fg:lavender)\
 $git_branch\
 $git_status\
-[](fg:blue bg:#74c7ec)\
+[](fg:blue bg:#7dc4e4)\
 $c\
 $rust\
 $golang\
@@ -19,10 +19,10 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:#74c7ec bg:#04a5e5)\
-[](fg:#04a5e5 bg:#4169d8)\
+[](fg:#7dc4e4 bg:#04a5e5)\
+[](fg:#04a5e5 bg:#1c7ed6)\
 $conda\
-[](fg:#4169d8 )\
+[](fg:#1c7ed6 )\
 
 
 $time\
@@ -76,7 +76,7 @@ format = '[[($all_status$ahead_behind )](fg:crust bg:blue)]($style)'
 [nodejs]
 symbol = ""
 style = "bg:blue"
-format = '[[ $symbol( $version) ](fg:crust bg:blue)]($style)'
+format = '[[ $symbol( $version) ](fg:crust bg:#7dc4e4)]($style)'
 
 [c]
 symbol = " "
@@ -86,46 +86,46 @@ format = '[[ $symbol( $version) ](fg:crust bg:#7dc4e4)]($style)'
 [rust]
 symbol = ""
 style = "bg:blue"
-format = '[[ $symbol( $version) ](fg:crust bg:blue)]($style)'
+format = '[[ $symbol( $version) ](fg:crust bg:#7dc4e4)]($style)'
 
 [golang]
 symbol = ""
 style = "bg:blue"
-format = '[[ $symbol( $version) ](fg:crust bg:blue)]($style)'
+format = '[[ $symbol( $version) ](fg:crust bg:#7dc4e4)]($style)'
 
 [php]
 symbol = ""
 style = "bg:blue"
-format = '[[ $symbol( $version) ](fg:crust bg:blue)]($style)'
+format = '[[ $symbol( $version) ](fg:crust bg:#7dc4e4)]($style)'
 
 [java]
 symbol = " "
 style = "bg:blue"
-format = '[[ $symbol( $version) ](fg:crust bg:blue)]($style)'
+format = '[[ $symbol( $version) ](fg:crust bg:#7dc4e4)]($style)'
 
 [kotlin]#9d7cd8
 symbol = ""
 style = "bg:blue"
-format = '[[ $symbol( $version) ](fg:crust bg:blue)]($style)'
+format = '[[ $symbol( $version) ](fg:crust bg:#7dc4e4)]($style)'
 
 [haskell]
 symbol = ""
 style = "bg:blue"
-format = '[[ $symbol( $version) ](fg:crust bg:blue)]($style)'
+format = '[[ $symbol( $version) ](fg:crust bg:#7dc4e4)]($style)'
 
 [python]
 symbol = ""
 style = "bg:blue"
-format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:blue)]($style)'
+format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:#7dc4e4)]($style)'
 
 [docker_context]
 symbol = ""
 style = "bg:blue"
-format = '[[ $symbol( $context) ](fg:crust bg:blue)]($style)'
+format = '[[ $symbol( $context) ](fg:crust bg:#7dc4e4)]($style)'
 
 [conda]
 symbol = "  "
-style = "fg:crust bg:blue"
+style = "fg:crust bg:#7dc4e4"
 format = '[$symbol$environment ]($style)'
 ignore_base = false
 
@@ -139,7 +139,7 @@ vimcmd_symbol  = "[❮❮ ﾒ](fg:#6fa3b1)"
 disabled = false
 time_format = "%R"
 style = "bg:lavender"
-format = '[───────────────────────────](fg:surface0)[](#f27a2c)[](fg:#ef9f76 bg:#f27a2c)[](fg:peach bg:#ef9f76 )[[ at $time  ](fg:crust bg:peach)]($style)'
+format = '[───────────────────────────](fg:surface0)[](#f0833a)[](fg:#ef9f76 bg:#f0833a)[](fg:peach bg:#ef9f76 )[[ at $time  ](fg:crust bg:peach)]($style)'
 
 [cmd_duration]
 show_milliseconds = true
