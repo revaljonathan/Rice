@@ -2,7 +2,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[ ┌](text)\
+[┌](text)\
 $os\
 $username\
 [](bg:lavender fg:text)\
@@ -10,7 +10,7 @@ $directory\
 [](bg:blue fg:lavender)\
 $git_branch\
 $git_status\
-[](fg:blue bg:blue)\
+[](fg:blue bg:#74c7ec)\
 $c\
 $rust\
 $golang\
@@ -19,13 +19,14 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:blue bg:blue)\
+[](fg:#74c7ec bg:#04a5e5)\
+[](fg:#04a5e5 bg:#4169d8)\
 $conda\
-[](fg:blue )\
+[](fg:#4169d8 )\
 
 
 $time\
-[](fg:peaCh )\
+[](fg:peach )\
 
 $cmd_duration\
 $line_break\
@@ -79,8 +80,8 @@ format = '[[ $symbol( $version) ](fg:crust bg:blue)]($style)'
 
 [c]
 symbol = " "
-style = "bg:blue"
-format = '[[ $symbol( $version) ](fg:crust bg:blue)]($style)'
+style = "bg:#8bd5ca"
+format = '[[ $symbol( $version) ](fg:crust bg:#7dc4e4)]($style)'
 
 [rust]
 symbol = ""
@@ -130,15 +131,15 @@ ignore_base = false
 
 
 [character]
-success_symbol = "[ └─](bold fg:#)[](fg:blue)"
-error_symbol   = "[ └─](bold fg:#)[](fg:red)"
+success_symbol = "[└─](bold fg:#)[](fg:blue)"
+error_symbol   = "[└─](bold fg:#)[](fg:red)"
 vimcmd_symbol  = "[❮❮ ﾒ](fg:#6fa3b1)"
 
 [time]
 disabled = false
 time_format = "%R"
 style = "bg:lavender"
-format = '[───────────────────](fg:surface0)[](#af7e5f)[](fg:#af7e5f bg:#af7e5f)[](fg:peach bg:#af7e5f )[[ at $time  ](fg:crust bg:peach)]($style)'
+format = '[───────────────────────────](fg:surface0)[](#f27a2c)[](fg:#ef9f76 bg:#f27a2c)[](fg:peach bg:#ef9f76 )[[ at $time  ](fg:crust bg:peach)]($style)'
 
 [cmd_duration]
 show_milliseconds = true
