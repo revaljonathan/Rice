@@ -63,7 +63,7 @@ Cool stuff
 
 ![Main](assets/mainpic.png)
 
-![Terminal](assets/term.png)
+![Terminal](assets/newnew.png)
 
 ![display1](assets/display1.png)
 
