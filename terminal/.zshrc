@@ -39,7 +39,7 @@ done
 }
 
 if [[ "$TERM_PROGRAM" != "vscode" ]]; then
-    fastfetch -c ~/.config/fastfetch/morefetch.jsonc
+    fastfetch
 fi
 
 # OH MY ZSH
@@ -195,10 +195,6 @@ eval "$(starship init zsh)"
 
 # Created by `pipx` on 2025-12-31 05:14:11
 export PATH="$PATH:/home/reval/.local/bin"
-
-
-
-
 
 #zprof
 
