@@ -61,14 +61,12 @@ Cool stuff
 
 ![Main](assets/sddm.png)
 
-![Main](assets/mainpic.png)
+![Main](assets/shell.png)
 
-![Terminal](assets/newnew.png)
+![Terminal](assets/app2.png)
 
-![display1](assets/display1.png)
+![display1](assets/code.png)
 
-![vs1](assets/vs1.png)
-
-![vs2](assets/vs2.png)
+![vs1](assets/rofi.png)
 
 
