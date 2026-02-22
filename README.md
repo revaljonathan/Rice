@@ -18,7 +18,9 @@ Terminal    : kitty
 
 Shell       : zsh
 
-File manager : dolphin
+File manager :
++ dolphin
++ and yazi: https://github.com/sxyazi/yazi 
 
 Pdf reader : zathura: https://github.com/pwmt/zathura
 
@@ -34,7 +36,8 @@ Apps shown in screenshots:
 + editor : vscode
 + fastfetch : https://github.com/fastfetch-cli/fastfetch
 + btop : https://github.com/aristocratos/btop
-+ dolphin
++ yazi : https://github.com/sxyazi/yazi
++ rofi : https://github.com/davatorium/rofi
 
 Widgets on panel from left to right:
 + kara: https://github.com/dhruv8sh/kara
@@ -55,8 +58,8 @@ Cool stuff
 + krhonkite : https://github.com/esjeon/krohnkite
 + web to change wallpaper color scheme : https://notneelpatel.xyz/WallpaperThemeConverter/
 + SDDM theme : eucalyptus-drop : https://gitlab.com/Matt.Jolly/sddm-eucalyptus-drop
+
 # TODO
-+ try blur + transparency on more stuff
 + considered switching to fedora later
 
 ![Main](assets/sddm.png)
