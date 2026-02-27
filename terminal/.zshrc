@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+    #source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
+
 # Created by newuser for 5.9
 
 # BASIC ENV & KEYBIND
@@ -38,14 +45,10 @@ for i in {0..255}; do
 done
 }
 
-if [[ "$TERM_PROGRAM" != "vscode" ]]; then
-    fastfetch
-fi
 
 # OH MY ZSH
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME=""
-
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
     zsh-autosuggestions
@@ -147,6 +150,7 @@ alias lss='eza -l -h --sort=modified --reverse --color=always --icons --git --gr
 alias la='ls -A'
 alias lsa='la -G'
 alias lt='ls -T'
+alias rm='rm -I'
 
 # SHELL UTILS
 alias grep='grep --color=auto'
@@ -198,3 +202,12 @@ export PATH="$PATH:/home/reval/.local/bin"
 
 #zprof
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+#typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+    fastfetch
+fi
