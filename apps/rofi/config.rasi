@@ -1,96 +1,195 @@
-@theme "/dev/null"
-
-* {
-	bg: #1e1e2e;
-	background-color: @bg;
-}
-
-
 configuration {
-	show-icons: true;
-		icon-theme: "Papirus";
-	location: 0;
-	font: "JetBrainsMono Nerd Font 14";	
-	display-drun: "Launch:";
-	terminal: "kitty";
+    modes:              "window,run,ssh,drun";
+    sorting-method:     "normal";
+    show-icons:         true;
+    terminal:           "kitty";
+    editor:             "micro";
+    matching:           "regex";
+    drun-match-fields:  "name";
+    display-run:        " Menu:";
+    display-ssh:        " SSH:";
+    display-drun:       "󰀻 Apps:";
+    display-window:     " Windows:";
 }
 
-window { 
-	width: 35%;
-	transparency: "real";
-	orientation: vertical;
-	border-color: #74adc0;
+@theme "mocha"
+
+/* ── Palette ──────────────────────────────────────────────────────────── */
+* {
+    bg0:     #1e1e2e;
+    bg1:     #181825;
+    bg2:     #313244;
+    bg3:     #45475a;
+    fg0:     #cdd6f4;
+    fg1:     #bac2de;
+    fg2:     #6c7086;
+    red:     #f38ba8;
+    green:   #a6e3a1;
+    yellow:  #f9e2af;
+    blue:    #89b4fa;
+    magenta: #cba6f7;
+    cyan:    #94e2d5;
+
+    accent:  @magenta;
+    urgent:  @yellow;
+
+    /* Semantic aliases */
+    background-color:   transparent;
+    text-color:         @fg0;
 }
 
+/* ── Window ───────────────────────────────────────────────────────────── */
+window {
+    width:            620px;
+    background-color: @bg1;
+    border:           2px;
+    border-color:     @accent;
+    border-radius:    10px;
+    padding:          0;
+}
+
+/* ── Main box ─────────────────────────────────────────────────────────── */
 mainbox {
-	children: [inputbar, listview];
+    background-color: transparent;
+    children:         [ inputbar, message, listview, mode-switcher ];
+    spacing:          0;
+    padding:          12px;
 }
 
+/* ── Input bar ────────────────────────────────────────────────────────── */
+inputbar {
+    background-color: @bg2;
+    border-radius:    8px;
+    padding:          10px 14px;
+    margin:           0 0 10px 0;
+    children:         [ prompt, entry ];
+    spacing:          6px;
+}
 
-// ELEMENT
-// -----------------------------------
+prompt {
+    background-color: transparent;
+    text-color:       @accent;
+    font:             "JetBrains Mono Bold 12";
+}
 
+entry {
+    background-color: transparent;
+    text-color:       @fg0;
+    placeholder:      "Search…";
+    placeholder-color: @fg2;
+    font:             "JetBrains Mono 12";
+    cursor:           text;
+}
+
+/* ── Mode switcher ────────────────────────────────────────────────────── */
+mode-switcher {
+    background-color: transparent;
+    margin:           10px 0 0 0;
+    spacing:          6px;
+}
+
+button {
+    background-color: @bg2;
+    text-color:       @fg2;
+    border-radius:    6px;
+    padding:          5px 12px;
+    cursor:           pointer;
+}
+
+button selected {
+    background-color: @accent;
+    text-color:       @bg0;
+}
+
+/* ── List view ────────────────────────────────────────────────────────── */
+listview {
+    background-color: transparent;
+    columns:          1;
+    lines:            8;
+    scrollbar:        true;
+    spacing:          4px;
+    fixed-height:     false;
+}
+
+scrollbar {
+    width:            4px;
+    handle-width:     4px;
+    background-color: @bg2;
+    handle-color:     @accent;
+    border-radius:    4px;
+}
+
+/* ── List elements ────────────────────────────────────────────────────── */
 element {
-	padding: 4 12;
-	text-color: #cdd6f4;
+    background-color: transparent;
+    text-color:       @fg1;
+    border-radius:    6px;
+    padding:          8px 10px;
+    spacing:          8px;
+    orientation:      horizontal;
+    cursor:           pointer;
 }
 
-element selected {
-	background-color: #6c6f85;
-
+element normal.normal {
+    background-color: transparent;
+    text-color:       @fg1;
 }
 
-element-text {
-	background-color: inherit;
-	text-color: inherit;
+element normal.urgent {
+    background-color: transparent;
+    text-color:       @urgent;
+}
+
+element normal.active {
+    background-color: transparent;
+    text-color:       @cyan;
+}
+
+element selected.normal {
+    background-color: @bg3;
+    text-color:       @fg0;
+    border:           0 0 0 3px;
+    border-color:     @accent;
+}
+
+element selected.urgent {
+    background-color: @bg3;
+    text-color:       @urgent;
+    border:           0 0 0 3px;
+    border-color:     @urgent;
+}
+
+element selected.active {
+    background-color: @bg3;
+    text-color:       @cyan;
+    border:           0 0 0 3px;
+    border-color:     @cyan;
 }
 
 element-icon {
-	size: 16 px;
-	background-color: inherit;
-	padding: 0 6 0 0;
-	alignment: vertical;
+    background-color: transparent;
+    size:             24px;
+    cursor:           inherit;
 }
 
-listview {
-	columns: 2;
-	lines: 9;
-	padding: 8 0;
-	fixed-height: true;
-	fixed-columns: true;
-	fixed-lines: true;
-	border: 0 10 6 10;
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    cursor:           inherit;
+    vertical-align:   0.5;
+    font:             "JetBrains Mono 12";
 }
 
-// INPUT BAR 
-//------------------------------------------------
-
-entry {
-	text-color: #cdd6f4;
-	padding: 10 10 0 0;
-	margin: 0 -2 0 0;
+/* ── Message ──────────────────────────────────────────────────────────── */
+message {
+    background-color: @bg2;
+    border-radius:    8px;
+    padding:          8px 12px;
+    margin:           0 0 10px 0;
 }
 
-inputbar {
-	background-image: url("~/.config/rofi/rofi.png", width);
-	padding: 180 0 0;
-	margin: 0 0 0 0;
-} 
-
-prompt {
-	text-color: #fab387;
-	padding: 10 6 0 10;
-	margin: 0 -2 0 0;
+textbox {
+    background-color: transparent;
+    text-color:       @fg2;
+    font:             "JetBrains Mono 12";
 }
-
-
-
-
-
-
-
-
-
-
-
-
