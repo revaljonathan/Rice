@@ -10,6 +10,11 @@ configuration {
     display-ssh:        " SSH:";
     display-drun:       "󰀻 Apps:";
     display-window:     " Windows:";
+     kb-move-char-forward: "";
+    kb-move-char-back: "";
+    kb-mode-next: "Right";
+    kb-mode-previous: "Left";
+    
 }
 
 @theme "mocha"
