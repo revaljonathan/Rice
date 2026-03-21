@@ -59,8 +59,7 @@ Cool stuff
 + web to change wallpaper color scheme : https://notneelpatel.xyz/WallpaperThemeConverter/
 + SDDM theme : eucalyptus-drop : https://gitlab.com/Matt.Jolly/sddm-eucalyptus-drop
 
-# TODO
-+ considered switching to fedora later
+most script is written by AI
 
 ![Main](assets/sddm.png)
 
