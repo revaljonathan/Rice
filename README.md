@@ -61,6 +61,7 @@ Cool stuff
 
 most script is written by AI
 
+#screenshots (Outdated!)
 ![Main](assets/sddm.png)
 
 ![Main](assets/shell.png)
