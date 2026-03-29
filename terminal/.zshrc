@@ -1,26 +1,29 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    #source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+   fastfetch -c ~/.config/fastfetch/small.jsonc
+fi
 
-# Created by newuser for 5.9
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=on
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# BASIC ENV & KEYBIND
-#zmodload zsh/zprof
-#export TERM=xterm-256color
+export TERM=xterm-256color
 export LS_COLORS=""
 export BAT_THEME="Catppuccin Mocha"
 export "MICRO_TRUECOLOR=1"
 export EZA_CONFIG_DIR="$HOME/.config/eza/"
 export EDITOR=micro
 export VISUAL=micro
+export COLORTERM=truecolor
 
+export PATH="$HOME/.cargo/bin:$PATH"
+export GOPATH=$HOME/.go
+export PATH="$GOPATH/bin:$PATH"
+export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$HOME/.local/bin:$PATH"
 
 bindkey '^[[A' up-line-or-history
 bindkey '^[[B' down-line-or-history
-
 
 setopt auto_cd
 setopt interactive_comments
@@ -45,10 +48,8 @@ for i in {0..255}; do
 done
 }
 
-
-# OH MY ZSH
 export ZSH="$HOME/.oh-my-zsh"
-#ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
     zsh-autosuggestions
@@ -106,9 +107,8 @@ alias checkmod='supergfxctl -g'
 alias listmod='supergfxctl -s'
 alias modintel='supergfxctl -m Integrated'
 alias modhybrid='supergfxctl -m Hybrid'
-alias ac='kscreen-doctor output.eDP-2.mode.1920x1200@60 && sleep 3 && modintel && loginctl terminate-user $USER'
-alias plug='kscreen-doctor output.eDP-2.mode.1920x1200@165 && sleep 3 && modhybrid && loginctl terminate-user $USER'
-alias nv='nvidia-smi'
+alias nv='nvim'
+
 
 # GIT
 alias gs='la && git status'
@@ -121,6 +121,7 @@ gacp() {
   git commit -m "$1"
   git push
 }
+alias gp='git pull'
 
 # EDITORS
 alias nano='micro'
@@ -136,7 +137,6 @@ take() {
   mkdir -p "$1" && cd "$1"
 }
 
-
 # NAVIGATION
 alias docs='cd Documents'
 alias rice='cd Rice'
@@ -150,11 +150,14 @@ alias lss='eza -l -h --sort=modified --reverse --color=always --icons --git --gr
 alias la='ls -A'
 alias lsa='la -G'
 alias lt='ls -T'
-alias rm='rm -I'
-
+alias c='clear'
+alias x='exit'
 # SHELL UTILS
-alias grep='grep --color=auto'
 alias color='color_check'
+alias grep='rg --color=auto --smart-case'
+alias cd='z'
+alias find='fd'
+
 fuck() { sudo $(fc -ln -1) }
 extract() {
   if [ -f "$1" ]; then
@@ -175,7 +178,6 @@ extract() {
   fi
 }
 
-
 # FETCH / INFO
 alias morefetch='fastfetch -c ~/.config/fastfetch/morefetch.jsonc'
 alias clock='tty-clock -s -c -C 5'
@@ -190,24 +192,15 @@ weather() {
 }
 alias udanraksu='weather semarang'
 
-
 f() { eval $(thefuck $(fc -ln -1)); }
 
 # STARSHIP (LAST)
-eval "$(starship init zsh)"
-
+#eval "$(starship init zsh)"
 
 # Created by `pipx` on 2025-12-31 05:14:11
 export PATH="$PATH:/home/reval/.local/bin"
 
-#zprof
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(zoxide init zsh)"
 
-
-#typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
-if [[ "$TERM_PROGRAM" != "vscode" ]]; then
-    fastfetch
-fi
